@@ -28,7 +28,10 @@ A5 = [[i,i*i] for i in A1]
 
 # Given the LRU_Cache class below (with self.size in __init__ and the skeleton of the methods
 # get and put, complete __init__, along with get and put.)
-class LRU_Cache():
+class LRU_Cache:
+    # Don't need paranthesis right after class for Python3.
+    # Use doubly linked list to hold information
+    
     """Size-limited associative storage that will, when full, discard the least recently used key"""
 
     def __init__(self, size=3):
@@ -44,7 +47,7 @@ class LRU_Cache():
             self.keyList.remove(key)
             self.keyList.append(key)
 
-            print(self.keyList)
+            # print(self.keyList)
             #return value of item
             return self.keyDict[key]
 
@@ -66,7 +69,7 @@ class LRU_Cache():
             key = self.keyList.pop(0)
             del(self.keyDict[key])
 
-        print(self.keyList)
+        # print(self.keyList)
 
 
 def unit_test():
@@ -90,5 +93,5 @@ def unit_test():
     print(test_cache.get(2))
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     unit_test()
