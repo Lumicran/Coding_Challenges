@@ -86,6 +86,8 @@ def node_distance(graph, nodeID1, nodeID2):
 
             # list of one string of node ids
             edges = node_ele.edges
+
+            pdb.set_trace()
         
 
             # iterate through node ID list 
@@ -116,12 +118,12 @@ def node_distance(graph, nodeID1, nodeID2):
 if __name__ == "__main__":
 
     #defines the variable "testGraph"
-    exec(open("testData.py").read())
+    exec(open("1testData.py").read())
 
     # print(hops(testGraph, "George"))
-    # import pdb
+    import pdb
 
-    # pdb.set_trace()
+
 
     print(node_distance(testGraph, "Monty", "Angie"))
     # print(testGraph.getNode("Angie").edges)
